@@ -1,0 +1,34 @@
+*&---------------------------------------------------------------------*
+*& Report  Z06PROGRAM1
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+
+REPORT  Z06PROGRAM1.
+
+*DATA A TYPE I.
+*DATA B TYPE I.
+*DATA C TYPE I.
+*A = 10 .
+*B = 20 .
+*C = A + B .
+*WRITE C.
+
+DATA : A TYPE I,  " USE CHAIN OPERATOR TO DEFINE DATA ONLY ONE TYPE.
+       B TYPE I,
+       C TYPE I.
+       A = 1.
+       B = 2.
+       C = A + B.
+       WRITE C.
+       ULINE.
+
+DATA : X TYPE I VALUE 20, "VALUE IS A KEYWORD USED FOR DEFAULT VALUE TO STORE USING DATA KEYWORD
+       Y TYPE I VALUE 30,
+       Z TYPE I.
+       Z = X + Y.
+       WRITE : Z.
+       ULINE.
+       WRITE :/'THE ADDITION OF ',X LEFT-JUSTIFIED,'AND',Y LEFT-JUSTIFIED, 'IS' ,Z LEFT-JUSTIFIED.
