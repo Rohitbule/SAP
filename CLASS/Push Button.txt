@@ -1,0 +1,37 @@
+*&---------------------------------------------------------------------*
+*& Report  YSELF02
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+
+REPORT  YSELF02.
+PARAMETERS : P_X TYPE I DEFAULT 10 OBLIGATORY,
+             P_Y TYPE I DEFAULT 20 OBLIGATORY,
+             P_Z TYPE I.
+
+SELECTION-SCREEN SKIP 3.
+SELECTION-SCREEN PUSHBUTTON 8(20) B1 USER-COMMAND FC1.
+SELECTION-SCREEN SKIP 5.
+SELECTION-SCREEN PUSHBUTTON 30(20) B2 USER-COMMAND FC2.
+SELECTION-SCREEN SKIP 4.
+SELECTION-SCREEN PUSHBUTTON 52(20) B3 USER-COMMAND FC3.
+
+INITIALIZATION.
+B1 = 'ADDITION'.
+B2 = 'CLEAR'.
+B3 = 'EXIT'.
+
+AT SELECTION-SCREEN.
+  CASE SY-UCOMM.
+    WHEN 'FC1'.
+      P_Z = P_X + P_Y.
+      WHEN 'FC2'.
+
+        CLEAR : P_X,
+                P_Y,
+                P_Z.
+        WHEN 'FC3'.
+          LEAVE PROGRAM.
+          ENDCASE.

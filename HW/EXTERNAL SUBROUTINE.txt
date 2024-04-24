@@ -1,0 +1,85 @@
+*&---------------------------------------------------------------------*
+*& Report  ZHW01
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+
+REPORT  ZHW01.
+
+FORM SUB1.
+    WRITE :/ 'SANJIVANI COLLEGE OF ENGINNERING '.
+    WRITE :/ 'WE ARE FORM INFRORMATON TECHNOLOGY BRANCH'.
+ENDFORM.
+
+FORM SUB2 USING X Y.
+  DATA Z TYPE I.
+  Z = X + Y.
+  WRITE :/ 'PROGRAM FOR ADDITION OF TWO NUMBER'.
+  WRITE :/ 'SUM IS ' , Z LEFT-JUSTIFIED.
+ENDFORM.
+
+---------------------------------------------------------------------------------
+
+*&---------------------------------------------------------------------*
+*& Report  ZHW02
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+
+REPORT  ZHW02.
+*PERFORM SUB1 IN PROGRAM ZHW01.
+PERFORM SUB1(ZHW01).
+
+ULINE.
+
+*PERFORM SUB2 in PROGRAM Z1208PROG28 USING 10 20.
+PERFORM SUB2(Z1208PROG28) USING 30 40.
+
+ULINE.
+
+PERFORM SUB1(ZHW03).
+PERFORM SUB2(ZHW03) USING 500 200.
+PERFORM SUB3(ZHW03) USING 20 10.
+PERFORM SUB4(ZHW03) USING 50 10.
+PERFORM SUB5(ZHW03).
+
+----------------------------------------------------------------------------------
+
+*&---------------------------------------------------------------------*
+*& Subroutine Pool   ZHW03
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+
+PROGRAM  ZHW03.
+* APUN SUBROUTINE POOL KONTYA PAN PROGRAM MADHE INCLUDDE KARU SHAKTO .
+DATA Z TYPE I.
+
+FORM SUB1.
+  WRITE:/ 'BEGIN OF SUBROUTINE POOL PROGRAM '.
+ENDFORM.
+
+FORM SUB2 USING X Y .
+  Z = X + Y.
+  WRITE :/ 'SUM OF Z IS ' , Z.
+ENDFORM.
+
+FORM SUB3 USING X Y .
+  Z = X - Y .
+  WRITE :/ 'SUBTRACTION OF TWO NUMBER IS ', Z.
+ENDFORM.
+
+FORM SUB4 USING X Y.
+  Z = X * y.
+  WRITE:/ 'MULTIPLICATION OF TWO NUMBER IS ', Z.
+ENDFORM.
+
+FORM SUB5.
+  WRITE :/ 'END OF SUBROUTINE POOL'.
+ENDFORM.

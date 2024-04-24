@@ -1,0 +1,22 @@
+*&---------------------------------------------------------------------*
+*&  Include           Z1208PROGINCLUDE
+*&---------------------------------------------------------------------*
+
+
+DATA : X TYPE I,
+      Y TYPE I,
+      Z TYPE I.
+
+X = 10.
+Y = 20.
+Z = X + Y.
+
+WRITE : 'SUM OF TWO NO. IS' , Z.
+
+*SYNTAX : INCLUDE (NAME OF PROG).
+
+---------------------------------------------------------------------------
+
+
+REPORT  Z1208PROGINCLUDEEXEC.
+INCLUDE Z1208PROGINCLUDE.

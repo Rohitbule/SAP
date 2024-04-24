@@ -1,0 +1,41 @@
+* It is an function module program we have to activate program.
+* we have to write code in source code.
+* we have to pass the value in import section .
+
+
+FUNCTION Z06PROGRAM22.
+*"----------------------------------------------------------------------
+*"*"Local Interface:
+*"  IMPORTING
+*"     REFERENCE(I_A) TYPE  I
+*"     REFERENCE(I_B) TYPE  I
+*"  EXPORTING
+*"     REFERENCE(E_C) TYPE  I
+*"----------------------------------------------------------------------
+
+WRITE :/ 'SANJIVANI COLLEGE OF ENGINEERING'.
+DATA : C TYPE I.
+C = I_A + I_B.
+WRITE :/ 'THE ADDITION OF TWO NUMBER ' , C.
+
+ENDFUNCTION.
+
+
+=============================================================================
+
+* It is an executable program.
+
+REPORT  Z06PROGRAM24.
+
+PARAMETERS : I_A TYPE I,
+              I_B TYPE I.
+
+DATA E_C TYPE I.
+
+CALL FUNCTION 'Z06PROGRAM22'
+EXPORTING
+I_A           = I_A
+I_B           = I_B
+IMPORTING
+E_C           = E_C
+.

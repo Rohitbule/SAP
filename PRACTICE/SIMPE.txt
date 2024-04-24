@@ -1,0 +1,49 @@
+*&---------------------------------------------------------------------*
+*& Report  YSELF01
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+
+REPORT  YSELF01.
+
+*DATA : A TYPE I,  " : IT IS KNOWN AS CHAINING OPERATOR
+*       B TYPE I,
+*       C TYPE I.  " . IT IS KNOWN AS PERIOD
+*       A = 10.
+*       B = 10.
+*       C = A + B.
+*       WRITE :/ 'THE ADDITION OF TWO NUMBER IS ', C.
+
+*        DATA A TYPE I .
+*        DATA B TYPE I.
+*        DATA C TYPE I.
+*        A = 10.
+*        B = 10.
+*        C = A + B.
+*        WRITE :/ 'THE ADDITION OF TWO NUMBER IS' , C.
+
+*DATA :  A TYPE I VALUE 10,  "VALUE IS KEYWORD FOR DEFAULT VALUE.
+*        B TYPE I VALUE 20 ,
+*        C TYPE I.
+*        C = A + B.
+*        WRITE :/ 'THE ADDITON OF TWO NUMBER IS ' , C.
+
+*PARAMETER : A TYPE I, " PARAMETER IS A KEYWORD FOR TAKING AN INPUT FROM USER.
+*            B TYPE I.
+*DATA        C TYPE I.
+*            C = A * B.
+*            WRITE :/ 'THE MULTIPLICATION OF TWO NUMBER IS ' , C.
+
+*PARAMETER : A TYPE I DEFAULT 20, " DEFAULT IS A KEYWORD FOR TO STORE DEFAULT VALUE IN PARAMETER
+*            B TYPE I DEFAULT 30.
+*DATA        C TYPE I.
+*            C = A * B.
+*            WRITE :/ 'THE MULTIPLICATION OF TWO NUMBER IS ' , C.
+
+*PARAMETER : A TYPE I DEFAULT 20 OBLIGATORY, " OBLIGATORYIS A KEYWORD FOR TO STORE DEFAULT VALUE IN PARAMETER
+*            B TYPE I DEFAULT 30 OBLIGATORY.
+*DATA        C TYPE I.
+*            C = A * B.
+*            WRITE :/ 'THE MULTIPLICATION OF TWO NUMBER IS ' , C.

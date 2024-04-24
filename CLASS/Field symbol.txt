@@ -1,0 +1,35 @@
+
+
+REPORT  Z1208PROG17.
+
+
+data v_x type i value 39.
+
+*field-symbols srs. "syntax error
+field-symbols <srs>.
+
+write:/ 'dats is',v_x,
+      / 'srs data is', <srs>.
+
+**<SRS> = V_X. "RUNTIME ERROR
+*
+ULINE.
+*
+ASSIGN V_X TO <SRS>.
+*
+write:/ 'v_x data is', v_x,
+   / 'srs data is', <srs>.
+*
+V_X = 20.
+write:/ 'v_x data is', v_x,
+      / 'srs data is', <srs>.
+*
+ULINE.
+*
+DATA V_STR TYPE STR VALUE 'SANJIVANI'.
+*
+ASSIGN V_STR TO <SRS>.
+*
+WRITE :/'v_x data is', v_x,
+     / 'srs data is', <srs>,
+     / 'V_STR data is', V_STR.

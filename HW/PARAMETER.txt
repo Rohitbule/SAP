@@ -1,0 +1,32 @@
+*&---------------------------------------------------------------------*
+*& Report  Z06PROGRAM02
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+
+REPORT  Z06PROGRAM02.
+
+PARAMETER :  A TYPE I,   "parameter is a keyword use to take input from user
+             B TYPE I.
+DATA      :  C TYPE I.
+C = A + B.
+WRITE :/ 'ADDITION IS ' , C LEFT-JUSTIFIED.
+ULINE.
+
+
+PARAMETER :  X TYPE I DEFAULT 20,  "DEFAULT IS A KEYWORD USE TO GIVEN DEFAULT VALUE
+             Y TYPE I DEFAULT 30.
+DATA      :  Z TYPE I.
+Z = X + Y.
+WRITE :/ 'ADDITION IS ' , Z LEFT-JUSTIFIED.
+ULINE.
+
+
+PARAMETER: P TYPE I DEFAULT 100 OBLIGATORY,  " OBLIGATORY IS A KEYWORD USE TO FOR MANDATORY TO VALUE.
+           Q TYPE I DEFAULT 200 OBLIGATORY.
+DATA     : R TYPE I .
+R = P + Q.
+WRITE :/ 'ADDITION IS ', R LEFT-JUSTIFIED.
+ULINE.
