@@ -6,7 +6,7 @@
 *&
 *&---------------------------------------------------------------------*
 
-REPORT  YSELF01.
+REPORT   YSELF01.
 
 *DATA : A TYPE I,  " : IT IS KNOWN AS CHAINING OPERATOR
 *       B TYPE I,
